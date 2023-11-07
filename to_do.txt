@@ -1,0 +1,20 @@
+NETDOM QUERY FSMO -> être PDC pour HardenAD
+
+Activer les services :
+    Windows Server Backup
+
+Créer un disque dédié aux backups (minimum giga)
+
+DC too small : Mettre en place un deuxième DC pour de la redondance (si besoin)
+
+
+GPO :
+- AES 
+- NTLMv2
+
+Key events : The audit policy on domain controllers does not collect key events.
+GPO DefaultDomainPolicy : Computer Configuration -> Policies -> Windows Settings -> Security Settings -> Advanced Audit Policy Configuration
+
+
+Bonus :
+https://specopssoft.com/fr/produits/specops-password-auditor/
